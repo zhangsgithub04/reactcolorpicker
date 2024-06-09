@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { fabric } from 'fabric';
 import MyToolbar from './menuBar';
+import ColorPicker from './ColorPicker'; // Adjust the path as needed
 
 export default function TryFabricjs() {
   const canvasRef = useRef(null);
@@ -142,6 +143,7 @@ export default function TryFabricjs() {
   return (
     <div>
       <canvas ref={canvasRef}></canvas>
+      <ColorPicker  mycolor='#616161'/>
       <MyToolbar/>
 
     </div>
