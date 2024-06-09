@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+//import Home from './components/Home'
+//import Dashboard from './components/Dashboard'
+//import Product from './components/Product'
+//import Details from './components/Details'
+import  ButtonUsage from './mybutton';
+import  TryFabricjs from './fabricjs';
+import ShowColorPicker from './ShowColorPicker';
 
-function App() {
+import App2 from './Appbk';
+
+
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className="container mt-5 text-center">
+      <BrowserRouter>
+{
+        <nav>
 
-export default App;
+          <Link className="nav-link" to="/">
+            1. Home
+          </Link>
+          
+          <Link className="nav-link" to="fabricjs">
+            2. Try Fabricjs
+          </Link>
+
+          <Link className="nav-link" to="ShowColor">
+            3. Show ColorPicker
+          </Link>
+
+        </nav>
+}
+        <Routes>
+          <Route path="/" element={<ButtonUsage />} />
+          <Route path="/fabricjs" element={<TryFabricjs />} />
+
+          <Route path="/showcolor" element={<ShowColorPicker/>}/>
+   
+        </Routes>
+      </BrowserRouter>
+    </div>
+  )
+}
