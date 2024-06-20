@@ -66,7 +66,7 @@ export default function ColorPicker(p: Props) {
                         <MenuItem
                             key={index}
                             
-                    sx={{ backgroundColor: color, width: mycolor==color?50:30, height: 30, borderRadius: '50%' }}
+                    sx={{ backgroundColor: color, width: mycolor==color?'50px':'30px', height: '30px', borderRadius: '50%' }}
 
                     onClick={() => handleColorSelect(color)}
             />

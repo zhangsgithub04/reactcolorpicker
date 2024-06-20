@@ -143,7 +143,9 @@ export default function TryFabricjs() {
   return (
     <div>
       <canvas ref={canvasRef}></canvas>
+
       <ColorPicker  mycolor='#616161'/>
+      
       <MyToolbar/>
 
     </div>
