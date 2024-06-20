@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, MenuItem, MenuDivider, MenuButton } from '@mui/joy/Menu';
+import { Menu, MenuItem, Divider, MenuButton } from '@mui/joy';
 import Button from '@mui/joy/Button';
  
 const PopupMenu = () => {
@@ -10,7 +10,7 @@ const PopupMenu = () => {
       </MenuButton>
       <MenuItem>项目</MenuItem>
       <MenuItem>用户</MenuItem>
-      <MenuDivider />
+      <Divider />
       <MenuItem>设置</MenuItem>
     </Menu>
   );
